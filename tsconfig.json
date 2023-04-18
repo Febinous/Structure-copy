@@ -13,6 +13,9 @@
       "lib-home": [
         "dist/lib-home",
         "dist/lib-home"
+      ],
+      "lib-reusables": [
+        "dist/lib-reusables"
       ]
     },
     "noFallthroughCasesInSwitch": true,

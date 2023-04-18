@@ -138,6 +138,37 @@
           }
         }
       }
+    },
+    "lib-reusables": {
+      "projectType": "library",
+      "root": "projects/lib-reusables",
+      "sourceRoot": "projects/lib-reusables/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lib-reusables/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-reusables/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lib-reusables/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-reusables/src/test.ts",
+            "tsConfig": "projects/lib-reusables/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-reusables/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
